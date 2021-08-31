@@ -1,0 +1,9 @@
+npx create-next-app digital-marketplace
+
+yarn add ethers hardhat web3modal @openzeppelin/contracts ipfs-http-client axios bootstrap
+yarn add -D @types/mocha chai ts-node @types/react ethers @nomiclabs/hardhat-ethers @nomiclabs/hardhat-waffle @nomiclabs/buidler ethereum-waffle @typechain/hardhat typechain ts-generator @typechain/ethers-v5
+
+npx hardhat
+npx hardhat compile
+npx hardhat test
+npx hardhat run --network rinkeby scripts/deploy.ts

@@ -1,4 +1,5 @@
 import { ethers } from "hardhat";
+import { ThinkToken } from "../typechain/ThinkToken";
 
 /**
  * To Deploy
@@ -15,12 +16,10 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-  // We get the contract to deploy
-  const GretterFactory = await ethers.getContractFactory("Greeter");
-  const gretter = await GretterFactory.deploy();
-
-  await gretter.deployed();
-  console.log("Greeter deployed to:", gretter.address);
+  const tokenFactory = await ethers.getContractFactory("ThinkToken");
+  const stakingToken = (await tokenFactory.deploy()) as ThinkToken;
+  await stakingToken.deployed();
+  console.log("ThinkToken deployed to:", stakingToken.address);
 }
 
 main()

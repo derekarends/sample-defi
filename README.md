@@ -1,15 +1,12 @@
-# Basic Sample Hardhat Project
+# Basic Defi Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This project demonstrates a basic defi use case.
 
-Try running some of the following tasks:
+To deploy the sample project:
 
 ```shell
-npx hardhat accounts
+npx hardhat
 npx hardhat compile
-npx hardhat clean
 npx hardhat test
-npx hardhat node
-node scripts/deploy.ts
-npx hardhat help
+npx hardhat run --network rinkeby scripts/deploy.ts
 ```
